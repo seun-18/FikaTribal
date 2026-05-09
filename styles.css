@@ -5,6 +5,8 @@
 }
 
 :root{
+        --text: #FFFFFF;
+    --text-muted: #A0A0A0;
         --glass-bg: rgba(255, 255, 255, 0.3);
     --glass-bg2: rgba(255, 255, 255, 0.6);
     --glass-border: rgba(255, 255, 255, 0.3);
@@ -31,11 +33,110 @@ body{
 .logo{
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: var(--text-muted);
 }
 
 .navlinks{
     gap: 20px;
     display: flex;
     margin-right: 20px;
+
 }
+.navlinks a{
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navlinks a:hover{
+    color: var(--text);
+    font-size: 20px;
+}
+
+/* Hero */
+.HeroDiv{
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    color: var(--text);
+    margin: 50px 80px 0 80px;
+}
+
+.content{
+    width: 400px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content h1{
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: var(--shadow);
+    text-align: left;
+}
+.content p{
+    font-size: 18px;
+    
+    line-height: 1.9;
+    color: var(--text-muted);
+}
+
+
+
+/* Sliding background */
+.hero-image{
+    width: 420px;
+    margin-right: 40px;
+    position: relative;
+    height: 600px;
+    padding: 20px;
+    margin-right: 40px;
+}
+.bg {
+    width: 400px;
+    height: 100vh;
+    background-position: center;
+    position: absolute;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: slideRotate 12s infinite;
+    border-radius: 20px;
+        box-shadow: var(--shadow);
+}
+
+.bg:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.bg:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.bg:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.bg:nth-child(4) {
+    animation-delay: 9s;
+}
+
+@keyframes slideRotate {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
