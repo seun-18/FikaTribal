@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+        --glass-bg: rgba(255, 255, 255, 0.3);
+    --glass-bg2: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+}
+
+body{
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 40px;
+      backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navlinks{
+    gap: 20px;
+    display: flex;
+    margin-right: 20px;
+}
