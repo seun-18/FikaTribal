@@ -11,24 +11,33 @@
     --glass-bg2: rgba(255, 255, 255, 0.6);
     --glass-border: rgba(255, 255, 255, 0.3);
     --shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+    --shadow2: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 body{
     background: rgba(0, 0, 0, 0.9);
 }
 
+/* Navigations */
 
 .navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
     padding: 10px 40px;
       backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
-    box-shadow: var(--shadow);
     -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    top: 0;
+    position: sticky;
 }
+
+.nav-container{
+ display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
 
 .logo{
     font-size: 24px;
@@ -36,49 +45,58 @@ body{
     color: var(--text-muted);
 }
 
-.navlinks{
+.nav-menu{
     gap: 20px;
     display: flex;
     margin-right: 20px;
 
 }
-.navlinks a{
+
+.nav-menu li{
+    list-style: none;
+}
+
+.nav-menu a{
     text-decoration: none;
     color: var(--text-muted);
     font-size: 18px;
     transition: color 0.3s ease;
 }
 
-.navlinks a:hover{
+.nav-menu a:hover{
     color: var(--text);
     font-size: 20px;
 }
 
 /* Hero */
 .HeroDiv{
+        height: 600px;
     display: flex;
-    height: 100vh;
-    justify-content: space-between;
-    color: var(--text);
-    margin: 50px 80px 0 80px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .content{
-    width: 400px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+     position: relative;
+    z-index: 3;
+    animation: slideUp 0.8s ease;
+    max-width: 600px;
     justify-content: center;
+    text-align: center;
 }
 .content h1{
     font-size: 36px;
+    color: var(--text-muted);
     margin-bottom: 20px;
     text-shadow: var(--shadow);
     text-align: left;
 }
 .content p{
     font-size: 18px;
-    
     line-height: 1.9;
     color: var(--text-muted);
 }
@@ -87,23 +105,21 @@ body{
 
 /* Sliding background */
 .hero-image{
-    width: 420px;
-    margin-right: 40px;
-    position: relative;
-    height: 600px;
-    padding: 20px;
-    margin-right: 40px;
+      position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 .bg {
-    width: 400px;
-    height: 100vh;
+   position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
     background-position: center;
-    position: absolute;
-    background-repeat: no-repeat;
     opacity: 0;
     animation: slideRotate 12s infinite;
-    border-radius: 20px;
-        box-shadow: var(--shadow);
 }
 
 .bg:nth-child(1) {
@@ -139,4 +155,108 @@ body{
         opacity: 0;
     }
 }
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-muted);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+    background-color: var(--text-muted);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+    background-color: var(--text-muted);
+}
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: 400px;
+        background:rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        padding: 40px 30px;
+        gap: 20px;
+        transition: left 0.3s ease;
+        z-index: 999;
+        overflow-y: auto;
+            backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--shadow);
+ 
+    -webkit-backdrop-filter: blur(10px);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+        color: var(--text);
+        width: 100%;
+        padding: 12px 15px;
+        text-align: left;
+    }
+
+    .nav-link:hover {
+        background: rgba(108, 99, 255, 0.2);
+        border-color: var(--primary);
+    }
+
+    .HeroDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+
+}
+
+@media (max-width: 480px) {
+    .hamburger span {
+        width: 22px;
+        height: 2.5px;
+    }
+
+    .navlinks {
+        padding: 30px 20px;
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+}
+
+
 
