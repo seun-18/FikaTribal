@@ -7,8 +7,9 @@
 :root{
         --text: #FFFFFF;
     --text-muted: #A0A0A0;
+      --text-muted2:  rgba(0, 0, 0, 0.7) ;
         --glass-bg: rgba(255, 255, 255, 0.3);
-    --glass-bg2: rgba(255, 255, 255, 0.6);
+    --glass-bg2: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.3);
     --shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
     --shadow2: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -80,6 +81,17 @@ body{
     overflow: hidden;
 }
 
+.hero-glass {
+    position: absolute;
+    background: var(--glass-bg2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: var(--shadow2);
+    padding: 40px;
+    border: 1px solid var(--glass-border);
+    z-index: 2;
+}
+
 .content{
      position: relative;
     z-index: 3;
@@ -90,15 +102,16 @@ body{
 }
 .content h1{
     font-size: 36px;
-    color: var(--text-muted);
+    color: var(--text-muted2);
     margin-bottom: 20px;
-    text-shadow: var(--shadow);
-    text-align: left;
+    text-shadow: var(--shadow2);
+    text-align: center;
 }
 .content p{
     font-size: 18px;
     line-height: 1.9;
-    color: var(--text-muted);
+    color: var(--text-muted2);
+    text-shadow: var(--shadow2);
 }
 
 
@@ -111,13 +124,13 @@ body{
     top: 0;
     left: 0;
     z-index: 1;
+    background-size: cover;
 }
 .bg {
    position: absolute;
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
     opacity: 0;
     animation: slideRotate 12s infinite;
 }
@@ -189,6 +202,8 @@ body{
 }
 
 
+/* Responsive Design */
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -235,9 +250,22 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: 100vh;
     }
 
-   
+    .bg{
+        background-size: contain;
+        background-position: center;
+    }
+
+    .hero-glass{
+        margin: 20px;
+    }
+
+    .content p{
+        line-height: 1.1;
+    }
+  
 
 }
 
