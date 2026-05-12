@@ -243,7 +243,7 @@ body{
     border: 1px solid var(--glass-border);
     border-radius: 5px;
     max-width: 300px;
-    height: 450px;
+    height: 480px;
 }
 
 .card img{
@@ -288,6 +288,7 @@ body{
 }
 
 button , .exp{
+    margin-top: 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
