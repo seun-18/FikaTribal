@@ -445,6 +445,7 @@ footer h3{
     padding: 20px;
     text-align: center;
     justify-content: center;
+    color: var(--text-muted);
 }
 
 .link2{
