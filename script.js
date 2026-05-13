@@ -185,7 +185,7 @@ function showNotification(message) {
         bottom: 20px;
         right: 20px;
          background: linear-gradient(136deg, var(--text), var(--glass-bg2));
-        color: white;
+        color: black;
         padding: 15px 20px;
         border-radius: 5px;
         z-index: 3000;

@@ -389,6 +389,68 @@ button:hover , .exp:hover{
     background: var(--secondary);
 }
 
+/* Footer */
+
+footer{
+    margin-top: 100px;
+    border-top: 1px solid var(--shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+}
+
+footer h3{
+    color: var(--text);
+}
+
+.footer{
+    display: flex;
+    color: var(--text-muted);
+    gap: 50px;
+    
+}
+
+.About{
+    margin: 40px;
+}
+
+.About h3{
+      margin-bottom: 10px; 
+}
+
+.link{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.link h3{
+    margin-bottom: 10px;
+}
+
+.link a{
+    text-decoration: none;
+    color: var(--text-muted);
+}
+
+.footer p{
+    max-width: 300px;
+}
+
+.right{
+    margin-top: 60px;
+     border-top: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.link2{
+    display: flex;
+}
+
 
 /* Responsive Design */
 
@@ -468,6 +530,10 @@ button:hover , .exp:hover{
          box-shadow: var(--shadow2);
     transform: translateY(-5px);
     }
+
+    footer{
+        flex-direction: column;
+    }
   
 
 }
@@ -486,6 +552,22 @@ button:hover , .exp:hover{
     .nav-link {
         font-size: 0.9rem;
         padding: 10px 12px;
+    }
+
+    .logo{
+        font-size: 20px;
+    }
+
+    .About{
+        margin: 30px;
+    }
+
+    .link{
+        margin :30px;
+    }
+
+    .footer{
+        flex-direction: column;
     }
 }
 
