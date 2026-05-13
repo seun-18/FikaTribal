@@ -299,6 +299,11 @@ button {
     transition: background-color 0.3s ease;
     background: linear-gradient(136deg, var(--text), var(--glass-bg2));
 }  
+
+.purchase i{
+    color: black;
+}
+
 button:hover , .exp:hover{
     background: linear-gradient(136deg, var(--text-muted), var(--glass-bg));
     color: var(--text-muted);
