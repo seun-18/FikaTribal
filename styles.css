@@ -288,12 +288,13 @@ body{
     padding: 20px;
 }
 
-button , .exp{
+button {
     margin-top: 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    color: black;
     font-size: 14px;
     transition: background-color 0.3s ease;
     background: linear-gradient(136deg, var(--text), var(--glass-bg2));
