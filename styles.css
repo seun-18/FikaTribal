@@ -291,7 +291,7 @@ body{
 
 button, .exp{
     margin-top: 10px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -1048,6 +1048,20 @@ footer h3{
          box-shadow: var(--shadow2);
     transform: translateY(-5px);
     }
+
+    .purchase{
+        width: 100%;
+    }
+
+    .purchase .buy-btn{
+        padding: 5px;
+        width: 100px;
+    }
+
+    .purchase .buy-btn2{
+        width: 250px;
+    }
+
 
     footer{
         flex-direction: column;
