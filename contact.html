@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fika Tribal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+
+        <!-- Navigation Bar -->
+          <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Fika Tribal</h1>
+            </div>
+            <ul class="Back">
+                <li><a href="index.html" class="Back">Back to Home</a></li>
+            </ul>
+
+            <div class="back2">
+            <a href="index.html" class="back2"> <i class="fa-solid fa-chevron-left "></i></a>
+            </div>
+        </div>
+    </nav>
+    
+   <div class="contact">
+
+    <div class="us">
+        <h1>Contact Us </h1>
+        <p>Have a question, a custom request or need help with an order? Send us a message</p>
+    </div>
+
+     <form id="contact-form" class="contact-form" action="https://formspree.io/f/xykoqaad" method="POST" novalidate>
+        <div class="fields" aria-label="Contact fields">
+          <label>
+            Your name
+            <input type="text" name="name" placeholder="Full name" required aria-required="true">
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="_replyto" placeholder="you@example.com" required aria-required="true">
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" rows="6" placeholder="Tell us about your request..." required aria-required="true"></textarea>
+          </label>
+
+          <!-- Honeypot for bots — keep name "_gotcha" for Formspree to detect spam submissions -->
+          <label style="display:none;">
+            Don't fill this out if you're human:
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </label>
+
+          <!-- Optional: subject for your inbox -->
+          <input type="hidden" name="_subject" value="New Order From Fika Tribal">
+        </div>
+
+        <div class="contact-info" aria-label="Contact actions">
+          <p>Prefer immediate help? <a href="https://wa.link/glpd7f" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a></p>
+          <p style="margin-top:8px;;">We will reply during business hours (Mon–Fri).</p>
+          <button type="submit" class="buy-btn" aria-label="Send message">Send message</button>
+        </div>
+      </form>
+   </div>
+
+      <!-- Footer -->
+
+    <footer>
+        <div class="footer">
+            <div class="About">
+                <h3>About Us</h3>
+                <p>We offer only the best asthetics to your taste</p>
+                <p>The alternative is to embrace the unknown and find beauty in the unexpected</p>
+            </div>
+
+            <div class="link">
+                <h3>Cuz ... why not</h3>
+                <a href="#">Tribals</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="link">
+                <h3>Follow Us</h3>
+             <div class="link2">
+                   <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+             </div>                
+            </div>
+        </div>
+
+        <div class="right">
+            <p>All Rights Resevered &copy; 2026</p>
+        </div>
+
+    </footer>
+    <script src="contact.js"></script>
+</body>
+</html>
+

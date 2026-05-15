@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - Fika Tribal</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 <body class="checkout-body">
     <!-- Navigation Bar -->
@@ -16,13 +14,12 @@
             <div class="logo">
                 <h1>Fika Tribal</h1>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Back to Home</a></li>
+            <ul class="Back">
+                <li><a href="index.html" class="Back">Back to Home</a></li>
             </ul>
-            <div class="hamburger" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="back2">
+            <a href="index.html" class="back2"> <i class="fa-solid fa-chevron-left "></i></a>
             </div>
         </div>
     </nav>
@@ -75,7 +72,7 @@
                         
                         <!-- Card Preview -->
                         <div class="card-preview" id="card-preview">
-                            <div class="card-front">
+                            <div class="card-front" style="background: url(images/Card\ -\ FIKA\ TRIBAL.png); background-size: cover; background-repeat: no-repeat;background-position: center;">
                                 <div class="card-chip"><i class="fas fa-microchip"></i></div>
                                 <div class="card-number" id="preview-card-number">•••• •••• •••• ••••</div>
                                 <div class="card-holder">
@@ -87,7 +84,7 @@
                                     <p id="preview-card-expiry">MM/YY</p>
                                 </div>
                             </div>
-                            <div class="card-back">
+                            <div class="card-back" >
                                 <div class="card-stripe"></div>
                                 <div class="card-cvv">
                                     <small>CVV</small>
@@ -198,7 +195,6 @@
         </div>
     </footer>
 
-   
     <script src="checkout.js"></script>
 </body>
 </html>
