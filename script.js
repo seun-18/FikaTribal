@@ -48,41 +48,49 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
 });
 
-// Cart Data
+// Cart Data - Extended with all 30 products
 const Tribal = [
-    {
-        id: 1,
-        title: "Bauble #4",
-        price: 20000
-    },
-    {
-        id: 2,
-        title: "Bauble #3",
-        price: 20000
-    },
-    {
-        id: 3,
-        title: "Bauble #2",
-        price: 20000
-    },
-    {
-        id: 4,
-        title: "Bauble #1",
-        price: 20000
-    }
-]
+    { id: 1, title: "Bauble #1", price: 20000 },
+    { id: 2, title: "Bauble #2", price: 20000 },
+    { id: 3, title: "Bauble #3", price: 20000 },
+    { id: 4, title: "Bauble #4", price: 20000 },
+    { id: 5, title: "Bauble #5", price: 20000 },
+    { id: 6, title: "Bauble #6", price: 20000 },
+    { id: 7, title: "Bauble #7", price: 20000 },
+    { id: 8, title: "Bauble #8", price: 20000 },
+    { id: 9, title: "Bauble #9", price: 20000 },
+    { id: 10, title: "Bauble #10", price: 20000 },
+    { id: 11, title: "Bauble #11", price: 20000 },
+    { id: 12, title: "Bauble #12", price: 20000 },
+    { id: 13, title: "Bauble #13", price: 20000 },
+    { id: 14, title: "Bauble #14", price: 20000 },
+    { id: 15, title: "Bauble #15", price: 20000 },
+    { id: 16, title: "Bauble #16", price: 20000 },
+    { id: 17, title: "Bauble #17", price: 20000 },
+    { id: 18, title: "Bauble #18", price: 20000 },
+    { id: 19, title: "Bauble #19", price: 20000 },
+    { id: 20, title: "Bauble #20", price: 20000 },
+    { id: 21, title: "Bauble #21", price: 20000 },
+    { id: 22, title: "Bauble #22", price: 20000 },
+    { id: 23, title: "Bauble #23", price: 20000 },
+    { id: 24, title: "Bauble #24", price: 20000 },
+    { id: 25, title: "Bauble #25", price: 20000 },
+    { id: 26, title: "Bauble #26", price: 20000 },
+    { id: 27, title: "Bauble #27", price: 20000 },
+    { id: 28, title: "Bauble #28", price: 20000 },
+    { id: 29, title: "Bauble #29", price: 20000 },
+    { id: 30, title: "Bauble #30", price: 20000 }
+];
 
 let cart = [];
 
 // Load Properties Function
 function loadProperties() {
-    // This function can be used to dynamically load product properties
     console.log('Properties loaded:', Tribal);
 }
 
 // Setup Navigation Function
 function setupNavigation() {
-    // This function can be used to set up navigation event listeners
     console.log('Navigation setup complete');
 }
 
@@ -172,13 +180,11 @@ function proceedToCheckout() {
         return;
     }
     
-    // Redirect to checkout page
     window.location.href = 'checkout.html';
 }
 
 // Notification Function
 function showNotification(message) {
-    // Create a simple notification
     const notification = document.createElement('div');
     notification.style.cssText = `
         position: fixed;

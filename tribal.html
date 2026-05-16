@@ -1,0 +1,498 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fika Tribal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Fika Tribal</h1>
+            </div>
+            <ul class="Back">
+                <li><a href="index.html" class="Back">Back to Home</a></li>
+            </ul>
+
+            <div class="back2">
+                <a href="index.html" class="back2"> <i class="fa-solid fa-chevron-left "></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Cart Modal  -->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+                <h3>Total: ₦<span id="cart-total">0</span></h3>
+                <button class="btn-checkout" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="Tribals">
+        <div class="tribal-container">
+
+            <div class="tri">
+                <h1>Fika Tribal</h1>
+                <h2> The Best Tribals Money can Buy </h2>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProducts(event, 'all')">All</button>
+                <button class="filter-btn" onclick="filterProducts(event, 'limited')">Limited</button>
+                <button class="filter-btn" onclick="filterProducts(event, 'aesthetics')">Aesthetics</button>
+                <button class="filter-btn" onclick="filterProducts(event, 'statement')">Statement</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="Bauble" id="Bauble">
+
+        <div class="container">
+            <!-- Product 1 -->
+            <div class="card" id="1" data-category="limited">
+                <img src="https://images.unsplash.com/photo-1685489802596-673d1b55bd38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(1)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card" id="2" data-category="aesthetics">
+                <img src="https://plus.unsplash.com/premium_photo-1740520684115-6580bd3aa303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(2)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="card" id="3" data-category="statement">
+                <img src="https://images.unsplash.com/photo-1576616685533-058fa0888c4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(3)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="card" id="4" data-category="limited">
+                <img src="https://images.unsplash.com/photo-1575552487003-4e8934e2abc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(4)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="card" id="5" data-category="aesthetics">
+                <img src="https://images.unsplash.com/photo-1685489802596-673d1b55bd38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #5</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(5)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="card" id="6" data-category="statement">
+                <img src="https://plus.unsplash.com/premium_photo-1740520684115-6580bd3aa303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #6</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(6)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="card" id="7" data-category="limited">
+                <img src="https://images.unsplash.com/photo-1576616685533-058fa0888c4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #7</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(7)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="card" id="8" data-category="aesthetics">
+                <img src="https://images.unsplash.com/photo-1575552487003-4e8934e2abc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #8</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(8)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="card" id="9" data-category="statement">
+                <img src="https://images.unsplash.com/photo-1685489802596-673d1b55bd38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #9</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(9)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="card" id="10" data-category="limited">
+                <img src="https://plus.unsplash.com/premium_photo-1740520684115-6580bd3aa303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #10</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(10)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="card" id="11" data-category="aesthetics">
+                <img src="https://images.unsplash.com/photo-1576616685533-058fa0888c4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #11</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(11)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="card" id="12" data-category="statement">
+                <img src="https://images.unsplash.com/photo-1575552487003-4e8934e2abc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #12</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(12)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 13 -->
+            <div class="card" id="13" data-category="limited">
+                <img src="https://images.unsplash.com/photo-1685489802596-673d1b55bd38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #13</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(13)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 14 -->
+            <div class="card" id="14" data-category="aesthetics">
+                <img src="https://plus.unsplash.com/premium_photo-1740520684115-6580bd3aa303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #14</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(14)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 15 -->
+            <div class="card" id="15" data-category="statement">
+                <img src="https://images.unsplash.com/photo-1576616685533-058fa0888c4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #15</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(15)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 16 -->
+            <div class="card" id="16" data-category="limited">
+                <img src="https://images.unsplash.com/photo-1575552487003-4e8934e2abc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #16</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(16)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 17 -->
+            <div class="card" id="17" data-category="aesthetics">
+                <img src="https://images.unsplash.com/photo-1685489802596-673d1b55bd38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #17</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(17)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 18 -->
+            <div class="card" id="18" data-category="statement">
+                <img src="https://plus.unsplash.com/premium_photo-1740520684115-6580bd3aa303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #18</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(18)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 19 -->
+            <div class="card" id="19" data-category="limited">
+                <img src="https://images.unsplash.com/photo-1576616685533-058fa0888c4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #19</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(19)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 20 -->
+            <div class="card" id="20" data-category="aesthetics">
+                <img src="https://images.unsplash.com/photo-1575552487003-4e8934e2abc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #20</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(20)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 21 -->
+            <div class="card" id="21" data-category="statement">
+                <img src="https://images.unsplash.com/photo-1685489802596-673d1b55bd38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #21</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(21)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 22 -->
+            <div class="card" id="22" data-category="limited">
+                <img src="https://plus.unsplash.com/premium_photo-1740520684115-6580bd3aa303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #22</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(22)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 23 -->
+            <div class="card" id="23" data-category="aesthetics">
+                <img src="https://images.unsplash.com/photo-1576616685533-058fa0888c4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #23</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(23)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 24 -->
+            <div class="card" id="24" data-category="statement">
+                <img src="https://images.unsplash.com/photo-1575552487003-4e8934e2abc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #24</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(24)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 25 -->
+            <div class="card" id="25" data-category="limited">
+                <img src="https://images.unsplash.com/photo-1685489802596-673d1b55bd38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #25</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(25)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 26 -->
+            <div class="card" id="26" data-category="aesthetics">
+                <img src="https://plus.unsplash.com/premium_photo-1740520684115-6580bd3aa303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #26</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(26)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 27 -->
+            <div class="card" id="27" data-category="statement">
+                <img src="https://images.unsplash.com/photo-1576616685533-058fa0888c4a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #27</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(27)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 28 -->
+            <div class="card" id="28" data-category="limited">
+                <img src="https://images.unsplash.com/photo-1575552487003-4e8934e2abc9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #28</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(28)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 29 -->
+            <div class="card" id="29" data-category="aesthetics">
+                <img src="https://images.unsplash.com/photo-1685489802596-673d1b55bd38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEFsdGUlMjBqZXdlbHJ5fGVufDB8fDB8fHww"
+                    alt="Tribal Bauble">
+                <h3>Bauble #29</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(29)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 30 -->
+            <div class="card" id="30" data-category="statement">
+                <img src="https://plus.unsplash.com/premium_photo-1740520684115-6580bd3aa303?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8QWx0ZSUyMGpld2Vscnl8ZW58MHx8MHx8fDA%3D"
+                    alt="Tribal Bauble">
+                <h3>Bauble #30</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt harum id labore unde debitis soluta
+                    enim iusto voluptate laboriosam repellendus?</p>
+                <div class="purchase">
+                    <button class="buy-btn">View</button>
+                    <button onclick="addToCart(30)"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="exp">Explore Our Tribals</a>
+
+    </section>
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="About">
+                <h3>About Us</h3>
+                <p>We offer only the best asthetics to your taste</p>
+                <p>The alternative is to embrace the unknown and find beauty in the unexpected</p>
+            </div>
+
+            <div class="link">
+                <h3>Cuz ... why not</h3>
+                <a href="tribal.html">Tribals</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="link">
+                <h3>Follow Us</h3>
+                <div class="link2">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <p>All Rights Resevered &copy; 2026</p>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+    <script src="tribal.js"></script>
+
+</body>
+
+</html>
